@@ -2,11 +2,15 @@
 #include <unistd.h>
 #include <limits.h>
 
-int main() {
+int main()
+{
     char cwd[PATH_MAX];
-    if (getcwd(cwd, sizeof(cwd)) != NULL) {
+    if (getcwd(cwd, sizeof(cwd)) != NULL)
+    {
         printf("%s\n", cwd);
-    } else {
+    }
+    else
+    {
         perror("pwd");
         return 1;
     }
